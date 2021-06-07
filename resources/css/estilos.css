@@ -27,5 +27,17 @@ html {
 
 body {
     font-size: 15px;
-    
+    background-color: var(--veryDarkBLue);
+    font-family: 'Inter', sans-serif;
+    color: var(--white);
+}
+
+ 
+.info-card p {
+    color: var(--slightlyTransWhite);
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.box p {
+    font-family: 'Inter', sans-serif;
 }
