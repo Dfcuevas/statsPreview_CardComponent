@@ -27,9 +27,14 @@ html {
 
 body {
     font-size: 15px;
+    height: 100vh;
     background-color: var(--veryDarkBLue);
     font-family: 'Inter', sans-serif;
     color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
  
@@ -40,4 +45,59 @@ body {
 
 .box p {
     font-family: 'Inter', sans-serif;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 70vw;
+    height: 60vh;
+    border-radius: 10px;
+    background-color: var(--darkDesaturatedBlue);
+}
+
+.image-card,
+.info-card {
+    width: 50%;
+    height: 100%;
+}
+
+.image-card {
+    /* background-image: linear-gradient(var(--softViolet),
+     url(../images/image-header-desktop.jpg)); */
+    background-image: url(../images/image-header-desktop.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: relative;
+}
+
+.image-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--softViolet);
+    opacity: 0.4;
+}
+
+.info-card {
+    padding: 45px;
+}
+
+.info-card h1 {
+    font-size: 2rem;
+}
+
+.info-card span {
+    color: var(--softViolet);
+}
+
+.info-card .stats-card {
+    display: flex;
+    justify-content: space-between;
 }
