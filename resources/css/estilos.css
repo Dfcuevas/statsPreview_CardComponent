@@ -39,7 +39,7 @@ body {
 
  
 .info-card p {
-    color: var(--slightlyTransWhite);
+    color: var(--slightlyWhite);
     font-family: 'Lexend Deca', sans-serif;
 }
 
@@ -83,6 +83,8 @@ body {
     right: 0;
     background-color: var(--softViolet);
     opacity: 0.4;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .info-card {
@@ -100,4 +102,83 @@ body {
 .info-card .stats-card {
     display: flex;
     justify-content: space-between;
+}
+
+.stats-card {
+    text-align: center;
+}
+
+@media only screen and (max-width: 1075px) {
+
+    .flex-container {
+        height: 75vh;
+    }
+
+    .stats-card {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .stats-card .box3 {
+        flex-grow: 2;
+    }
+}
+
+@media only screen and (max-width: 930px) {
+    
+    .flex-container {
+        font-size: 0.8rem;
+    }
+
+    .info-card h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 775px) {
+    .flex-container {
+        flex-direction: column;
+        text-align: center;
+        height: 80vh;
+    }
+    
+    .image-card {
+        width: 100%;
+        height: 35%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 0;
+    }
+
+    .info-card {
+        font-size: 0.6rem;
+        width: 100%;
+        height: 65%;
+        padding-top: 0;
+    }
+
+    .info-card h1 {
+        font-size: 1.4rem;
+    }
+
+    .info-card p {
+        font-size: 0.7rem;
+    }
+    
+}
+
+@media only screen and (max-width: 415px) {
+    
+    .flex-container {
+        line-height: 1.5;
+    }
+
+    .info-card h1 {
+        font-size: 1.4rem;
+    }
+
+    .stats-card h2,
+    .stats-card p {
+        margin: 5px;
+    }
 }
